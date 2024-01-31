@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - WanderWorld</title><!--:w3school.1998.-->
+    <link rel="stylesheet" href="cssStyle.css"><!--:w3school.1998.-->
+    <style>
+        
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px; 
+        }
+        .gallery-caption {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px; 
+        }
+
+       
+
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+       
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        
+        .nav-button {
+            position: absolute;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+        }
+
+        .nav-button.left {
+            left: 10px;
+        }
+
+        .nav-button.right {
+            right: 10px;
+        }
+
+
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        
+        .site-name {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .container h2 {
+            text-align: center;
+        }
+            .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.social-icons img {
+    width: 40px; 
+    height: auto;
+    margin: 0 10px; 
+}
+    </style><!--:w3school.1998.-->
+</head>
+<body>
+
+<header>
+    <h1>WanderWorld</h1><!--:w3school.1998.-->
+    <p>Your Ultimate Travel Guide</p><!--:w3school.1998.-->
+</header>
+
+<nav>
+    
+    <nav>
+    <ul>
+        <li><a href="index.html" >Home</a></li><!--:w3school.1998.-->
+        <li><a href="about Us.html" >About Us</a></li><!--:w3school.1998.-->
+        <li><a href="Gallery.html" class="active">Gallery</a></li><!--:w3school.1998.-->
+        <li><a href="destinations.html">Destinations</a></li><!--:w3school.1998.-->
+        <li><a href="GetInvolved.html" >Get Involved</a></li><!--:w3school.1998.-->
+        <li><a href="contact.html">Contact</a></li><!--:w3school.1998.-->
+    </ul>
+</nav>
+</nav>
+
+<section>
+    <div class="container">
+        <h2>Best Tourist Sites</h2><!--:w3school.1998.-->
+
+        
+        <div class="gallery-container">
+           
+            <div class="gallery-item" onclick="openLightbox('images/eiffel_tower.jpg', 'Eiffel Tower')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Eiffel Tower</div>
+                <img src="images/eiffel_tower.jpg" alt="Eiffel Tower"><!--:w3school.1998.-->
+            </div>
+            <div class="gallery-item" onclick="openLightbox('images/machu_picchu.jpg', 'Machu Picchu')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Machu Picchu</div>
+                <img src="images/machu_picchu.jpg" alt="Machu Picchu"><!--:w3school.1998.-->
+            </div>
+            <div class="gallery-item" onclick="openLightbox('images/great_wall.jpg', 'Great Wall of China')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Great Wall of China</div>
+                <img src="images/great_wall.jpg" alt="Great Wall of China"><!--:w3school.1998.-->
+            </div>
+            <div class="gallery-item" onclick="openLightbox('images/colosseum.jpg', 'Colosseum')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Colosseum</div>
+                <img src="images/colosseum.jpg" alt="Colosseum"><!--:w3school.1998.-->
+            </div>
+            <div class="gallery-item" onclick="openLightbox('images/pyramids.jpg', 'Pyramids of Giza')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Pyramids of Giza</div>
+                <img src="images/pyramids.jpg" alt="Pyramids of Giza">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('images/Dubai.jpg', 'Dubai, UAE')"><!--:w3school.1998.--><!--iStock.2000.-->
+                <div class="site-name">Pyramids of Giza</div>
+                <img src="images/Dubai.jpg" alt="Dubai, UAE"><!--:w3school.1998.--><!--iStock.2000.-->
+            </div>
+            
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close-button" onclick="closeLightbox()"></span>
+            <button class="nav-button left" onclick="changeImage(-1)"></button><!--:w3school.1998.-->
+            <div class="lightbox-content">
+                <img id="lightboxImage" class="lightbox-image" alt="Lightbox Image">
+            </div>
+            <button class="nav-button right" onclick="changeImage(1)"></button>
+        </div>
+    </div>
+</section>
+
+ <div class="social-icons">
+    <a href="https://twitter.com/your_twitter_handle" target="_blank"><img src="images/twitter_icon.png" alt="Twitter"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--1000logos.net.1999.-->
+    <a href="https://www.instagram.com/your_instagram_handle" target="_blank"><img src="images/instagram_icon.jfif" alt="Instagram"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--Freepik.2010.-->
+    <a href="https://www.facebook.com/your_facebook_page" target="_blank"><img src="images/facebook_icon.png" alt="Facebook"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--:Looka.com.2016.-->
+    </div> 
+
+
+</body>
+</html>

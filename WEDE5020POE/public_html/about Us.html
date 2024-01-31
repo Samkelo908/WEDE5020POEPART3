@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WanderWorld</title><!--:w3school.1998.-->
+    <link rel="stylesheet" href="cssStyle.css"><!--:w3school.1998.-->
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>WanderWorld</h1><!--:w3school.1998.-->
+        <p>Your Ultimate Travel Guide</p><!--:w3school.1998.-->
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+       <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li><!--:w3school.1998.-->
+        <li><a href="about Us.html" class="active">About Us</a></li><!--:w3school.1998.-->
+        <li><a href="Gallery.html">Gallery</a></li><!--:w3school.1998.-->
+        <li><a href="destinations.html">Destinations</a></li><!--:w3school.1998.-->
+        <li><a href="GetInvolved.html">Get Involved</a></li><!--:w3school.1998.-->
+        <li><a href="contact.html">Contact</a></li><!--:w3school.1998.-->
+    </ul>
+    </div>
+</nav>
+
+<section id="about">
+    <div class="container">
+        <h2>About WanderWorld</h2><!--:w3school.1998.-->
+        <div class="slideshow">
+            <img src="images/aboutbackground1.jpg" alt="About WanderPulse Image 1"><!--iStock.2000.-->
+            <img src="images/aboutbackground2.jpg" alt="About WanderPulse Image 2"><!--iStock.2000.-->
+            <img src="images/aboutbackground3.jpg" alt="About WanderPulse Image 3"><!--iStock.2000.-->
+        </div>
+        <div class="about-content">
+            <p>Welcome to WanderWorld, your trusted travel companion. We are passionate about exploring the beauty of the world and sharing it with you.</p><!--:w3school.1998.-->
+            <p>At WanderWorld, our mission is to provide you with the inspiration, guidance, and resources you need to plan unforgettable journeys. Whether you're a seasoned traveler or embarking on your first adventure, we're here to make your travel dreams a reality.</p><!--:w3school.1998.-->
+            <p>Discover handpicked destinations, travel tips, and stories that will ignite your wanderlust. Join us on this exciting journey of exploration and discovery.</p><!--:w3school.1998.-->
+        </div>
+    </div>
+
+</section>
+
+<section id="about">
+    <div class="container1">
+        <div class="about-section mission1">
+            <div class="text12">
+                <h2>Mission</h2><!--:w3school.1998.-->
+                <p>Welcome to WanderPulse, where our mission is to inspire and assist you in planning your next unforgettable adventure. We believe in the power of travel to broaden perspectives, foster understanding, and create lasting memories.</p><!--:w3school.1998.-->
+                <p>Our dedicated team is committed to curating handpicked destinations, providing expert advice, and turning your wanderlust into extraordinary experiences. At WanderPulse, we strive to make every journey seamless, memorable, and filled with discovery.</p><!--:w3school.1998.-->
+            </div>
+            <div class="image12">
+                <img src="images/mission1.jpg" alt="Mission Image 1"><!--iStock.2000.-->
+                
+            </div>
+        </div>
+
+        
+            <div class="text12">
+                <h2>Vision</h2><!--:w3school.1998.-->
+                <p>Our vision is to be your go-to travel guide for exploring the beauty of the world. Whether you're a seasoned traveler or planning your first journey, we're here to guide you every step of the way. Let WanderWorld be your companion as you embark on a world of discovery and wanderlust.</p><!--:w3school.1998.-->
+                <p>We envision a world where travel transcends boundaries, connects people, and creates unforgettable moments. With a commitment to excellence, we aim to elevate your travel experience, providing insights, tips, and personalized itineraries that cater to your unique preferences.</p><!--:w3school.1998.-->
+            </div>
+        </div>
+     <div class="about-section vision1">
+            <div class="image12">
+                <img src="images/vission1.jpg" alt="Vision Image 1"><!--iStock.2000.-->
+                
+            </div>
+
+        <div class="about-section history1">
+            <div class="text12">
+                <h2>History</h2>
+                <p>Founded in 2005, WanderWorld started as a passion project among a group of avid travelers who shared a common dream of making travel accessible and extraordinary for everyone. What began as a small initiative has now evolved into a leading travel guide, dedicated to providing valuable insights and creating unforgettable travel experiences.</p><!--:w3school.1998.-->
+                <p>Throughout our journey, we have been privileged to connect with fellow travelers, explore diverse cultures, and witness the transformative power of travel. Our history is woven with stories of exploration, learning, and the joy of sharing the wonders of the world with our community.</p><!--:w3school.1998.-->
+            </div>
+            <div class="image12">
+                <img src="images/history1.jpg" alt="History Image 1"><!--iStock.2000.-->
+                
+            </div>
+        </div>
+    <div class="social-icons">
+    <a href="https://twitter.com/your_twitter_handle" target="_blank"><img src="images/twitter_icon.png" alt="Twitter"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--1000logos.net.1999.-->
+    <a href="https://www.instagram.com/your_instagram_handle" target="_blank"><img src="images/instagram_icon.jfif" alt="Instagram"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--Freepik.2010.-->
+    <a href="https://www.facebook.com/your_facebook_page" target="_blank"><img src="images/facebook_icon.png" alt="Facebook"></a><!--Samuel Darwin. 29/09/2021 --><!--:w3school.1998.--><!--:Looka.com.2016.-->
+    </div>
+    </div>
+</section>
+        
+        
+   
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 WanderWorld. All rights reserved.</p><!--:w3school.1998.-->
+    </div>
+</footer>
+        <!--Travery Media.2017-->
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slideshow = document.querySelector('.slideshow');
+        const images = slideshow.querySelectorAll('img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            for (let i = 0; i < images.length; i++) {
+                images[i].style.opacity = 0;
+            }
+            images[index].style.opacity = 1;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); 
+
+        
+        showImage(currentIndex);
+    });
+</script><!--Travery Media.2017-->
+
+<footer>
+    <p>&copy; 2024 WanderWorld. All rights reserved.</p><!--:w3school.1998.-->
+</footer>
+    
+<script src="script.js"></script>
+    </body>
+</html>
