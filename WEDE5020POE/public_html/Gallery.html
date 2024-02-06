@@ -131,13 +131,27 @@ and open the template in the editor.
     height: auto;
     margin: 0 10px; 
 }
+.youtube-videos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.youtube-container {
+    width: 48%; 
+}
+
+.youtube-video {
+    width: 100%;
+    height: auto;
+}
     </style><!--:w3school.1998.-->
 </head>
 <body>
 
 <header>
     <h1>WanderWorld</h1><!--:w3school.1998.-->
-    <p>Your Ultimate Travel Guide</p><!--:w3school.1998.-->
+    <p>Your Travel Guide</p><!--:w3school.1998.-->
 </header>
 
 <nav>
@@ -162,7 +176,7 @@ and open the template in the editor.
         <div class="gallery-container">
            
             <div class="gallery-item" onclick="openLightbox('images/eiffel_tower.jpg', 'Eiffel Tower')"><!--:w3school.1998.--><!--iStock.2000.-->
-                <div class="site-name">Eiffel Tower</div>
+                <div class="site-name">Eiffel Tower</div><!--:w3school.1998.-->
                 <img src="images/eiffel_tower.jpg" alt="Eiffel Tower"><!--:w3school.1998.-->
             </div>
             <div class="gallery-item" onclick="openLightbox('images/machu_picchu.jpg', 'Machu Picchu')"><!--:w3school.1998.--><!--iStock.2000.-->
@@ -170,32 +184,40 @@ and open the template in the editor.
                 <img src="images/machu_picchu.jpg" alt="Machu Picchu"><!--:w3school.1998.-->
             </div>
             <div class="gallery-item" onclick="openLightbox('images/great_wall.jpg', 'Great Wall of China')"><!--:w3school.1998.--><!--iStock.2000.-->
-                <div class="site-name">Great Wall of China</div>
+                <div class="site-name">Great Wall of China</div><!--:w3school.1998.-->
                 <img src="images/great_wall.jpg" alt="Great Wall of China"><!--:w3school.1998.-->
             </div>
             <div class="gallery-item" onclick="openLightbox('images/colosseum.jpg', 'Colosseum')"><!--:w3school.1998.--><!--iStock.2000.-->
-                <div class="site-name">Colosseum</div>
+                <div class="site-name">Colosseum</div><!--:w3school.1998.-->
                 <img src="images/colosseum.jpg" alt="Colosseum"><!--:w3school.1998.-->
             </div>
             <div class="gallery-item" onclick="openLightbox('images/pyramids.jpg', 'Pyramids of Giza')"><!--:w3school.1998.--><!--iStock.2000.-->
-                <div class="site-name">Pyramids of Giza</div>
+                <div class="site-name">Pyramids of Giza</div><!--:w3school.1998.-->
                 <img src="images/pyramids.jpg" alt="Pyramids of Giza">
             </div>
             <div class="gallery-item" onclick="openLightbox('images/Dubai.jpg', 'Dubai, UAE')"><!--:w3school.1998.--><!--iStock.2000.-->
-                <div class="site-name">Pyramids of Giza</div>
+                <div class="site-name">Dubai, UAE</div><!--:w3school.1998.-->
                 <img src="images/Dubai.jpg" alt="Dubai, UAE"><!--:w3school.1998.--><!--iStock.2000.-->
             </div>
             
         </div>
 
         <div id="lightbox" class="lightbox">
-            <span class="close-button" onclick="closeLightbox()"></span>
+            <span class="close-button" onclick="closeLightbox()"></span><!--:w3school.1998.-->
             <button class="nav-button left" onclick="changeImage(-1)"></button><!--:w3school.1998.-->
             <div class="lightbox-content">
-                <img id="lightboxImage" class="lightbox-image" alt="Lightbox Image">
+                <img id="lightboxImage" class="lightbox-image" alt="Lightbox Image"><!--:w3school.1998.-->
             </div>
-            <button class="nav-button right" onclick="changeImage(1)"></button>
+            <button class="nav-button right" onclick="changeImage(1)"></button><!--:w3school.1998.-->
         </div>
+        <div class="youtube-videos">
+        <div class="youtube-container">
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/exI_hD_4jAM?si=9gwROKN5Oitbtwz3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><!--:w3school.1998.-->
+        </div>
+        <div class="youtube-container">
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/ovQ3tJsZ1RU?si=UBDwM4nvi9JUNETx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><!--:w3school.1998.-->
+        </div>
+    </div>
     </div>
 </section>
 
