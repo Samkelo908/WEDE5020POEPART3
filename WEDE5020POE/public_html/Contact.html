@@ -184,40 +184,6 @@ and open the template in the editor.
         <p>&copy; 2024 WanderWorld. All rights reserved.</p><!--:w3school.1998.-->
     
 </footer>
-<!--The freeCodeCamp Forum.2019-->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            
-            const isFormSubmissionSuccessful = submitForm();
-
-            if (isFormSubmissionSuccessful) {
-                showSuccessMessage();
-            } else {
-                showErrorMessage();
-            }
-        });
-
-        function showSuccessMessage() {
-            successMessage.style.display = 'block';
-            errorMessage.style.display = 'none';
-            setTimeout(function () {
-                successMessage.style.display = 'none';
-            }, 3000); 
-        }
-
-        function showErrorMessage() {
-            errorMessage.style.display = 'block';
-            successMessage.style.display = 'none';
-        }
-    });
-</script><!--The freeCodeCamp Forum.2019-->
 
 </body>
 </html>

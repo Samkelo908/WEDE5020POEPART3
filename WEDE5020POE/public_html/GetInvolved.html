@@ -169,40 +169,40 @@ footer {
 
         <table>
             <tr>
-                <th>Category</th><!--W3Schools,2023.-->
-                <th>Description</th><!--W3Schools,2023.-->
+                <th>Category</th>
+                <th>Description</th>
                 <th>Action</th><!--W3Schools,2023.-->
             </tr>
             <tr>
-                <td>Community Engagement</td><!--W3Schools,2023.-->
-                <td>Participate in our community involvement programs to change the world for the better.</td><!--W3Schools,2023.-->
-                <td><a href="#" class="apply-button" onclick="openApplyModal1('Community Engagement')">Apply</a></td>
+                <td>Community Engagement</td>
+                <td>Join our community engagement programs to make a positive impact.</td><!--W3Schools,2023.-->
+                <td><a href="#" class="apply-button" onclick="openApplyModal('Community Engagement')">Apply</a></td>
             </tr>
             <tr>
-                <td>Collaboration Opportunities</td><!--W3Schools,2023.-->
-                <td>Explore possibilities for cooperation with WanderWorld and other organizations.</td><!--W3Schools,2023.-->
-                <td><a href="#" class="apply-button" onclick="openApplyModal1('Collaboration Opportunities')">Apply</a></td>
+                <td>Collaboration Opportunities</td>
+                <td>Explore collaboration opportunities with WanderWorld and other organizations.</td><!--W3Schools,2023.-->
+                <td><a href="#" class="apply-button" onclick="openApplyModal('Collaboration Opportunities')">Apply</a></td>
             </tr>
             <tr>
-                <td>Events and Activities</td><!--W3Schools,2023.-->
-                <td>Take part in the amazing WanderWorld-organized events and activities.</td><!--W3Schools,2023.-->
-                <td><a href="#" class="apply-button" onclick="openApplyModal1('Events and Activities')">Apply</a></td>
+                <td>Events and Activities</td>
+                <td>Participate in exciting events and activities organized by WanderWorld.</td><!--W3Schools,2023.-->
+                <td><a href="#" class="apply-button" onclick="openApplyModal('Events and Activities')">Apply</a></td>
             </tr>
             <tr>
-                <td>Membership Information</td><!--W3Schools,2023.-->
-                <td>Get information about our membership program and become a valued member.</td><!--W3Schools,2023.-->
-                <td><a href="#" class="apply-button" onclick="openApplyModal1('Membership Information')">Apply</a></td>
+                <td>Membership Information</td>
+                <td>Get details about our membership program and become a valued member.</td><!--W3Schools,2023.-->
+                <td><a href="#" class="apply-button" onclick="openApplyModal('Membership Information')">Apply</a></td>
             </tr>
         </table>
 
         
         <div id="applyModal" class="modal">
             <div class="modal-content">
-                <span class="close-button" onclick="closeModal1()"></span><!--W3Schools,2023.-->
+                <span class="close-button" onclick="closeModal()"></span>
                 <h3>Apply for Involvement</h3> <!--W3Schools,2023.-->
                 <form id="applyForm">
                     <label for="applicantName">Name:</label> <!--W3Schools,2023.-->
-                    <input type="text" id="applicantName" name="applicantName" required><!--W3Schools,2023.-->
+                    <input type="text" id="applicantName" name="applicantName" required>
 
                     <label for="applicantEmail">Email:</label> <!--W3Schools,2023.-->
                     <input type="email" id="applicantEmail" name="applicantEmail" required>
@@ -210,9 +210,9 @@ footer {
                     <label for="applicantNumber">Phone Number (South Africa):</label> <!--W3Schools,2023.-->
                     <input type="tel" id="applicantNumber" name="applicantNumber" pattern="[0-9]{10}" required>
 
-                    <input type="hidden" id="appliedCategory" name="appliedCategory" value=""><!--W3Schools,2023.-->
+                    <input type="hidden" id="appliedCategory" name="appliedCategory" value="">
                     
-                    <input type="submit" class="apply-button" value="Submit"><!--W3Schools,2023.-->
+                    <input type="submit" class="apply-button" value="Submit">
                 </form>
             </div>
         </div>
@@ -222,7 +222,7 @@ footer {
             <div class="modal-content">
                 <h3>Thank You!</h3><!--W3Schools,2023.-->
                 <p>Your application has been submitted. We will get in touch with you soon.</p><!--W3Schools,2023.-->
-                <span class="close-button" onclick="closeModal1()">Close</span>
+                <span class="close-button" onclick="closeModal()">Close</span>
             </div>
             
         </div>
@@ -256,25 +256,21 @@ footer {
             const email = document.getElementById('applicantEmail').value;
             const number = document.getElementById('applicantNumber').value;
             
-            
             console.log("Name: " + name);
             console.log("Email: " + email);
             console.log("Number: " + number);
             console.log("Applied Category: " + appliedCategory.value);
 
-           
             document.getElementById('thankYouModal').style.display = 'flex';
         });
     });
 
-    
-    function openApplyModal1(category) {
+    function openApplyModal(category) {
         appliedCategory.value = category;
         document.getElementById('applyModal').style.display = 'flex';
     }
 
-    
-    function closeModal1() {
+    function closeModal() {
         document.getElementById('applyModal').style.display = 'none';
         document.getElementById('thankYouModal').style.display = 'none';
     }
